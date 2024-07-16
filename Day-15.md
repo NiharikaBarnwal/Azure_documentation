@@ -145,10 +145,16 @@
 
 ---
 
+**Note:-**
+Azure never lets you decrease a disk size because their may be a possiblity that the disk is full.
+
 ### Swap OS Disk
 
 **Description:**
 - Replacing the OS disk with a backup disk.
+
+**Advantage**
+-IP of original server doesn't change
 
 **Process:**
 1. **Prepare a Backup OS Disk:**
