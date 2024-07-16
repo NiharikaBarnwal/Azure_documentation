@@ -1,5 +1,7 @@
 ### Day-11 (10-07-2024)
 
+---
+
 #### Network Security Group (NSG)
 
 **NSG Attachment:**
@@ -51,6 +53,7 @@
                  VM level                                                                Subnet level
 
 ```
+
 ---
 
 #### Standard Load Balancer (LB)
@@ -92,6 +95,7 @@
              |  Static IP)|                     |  Static IP) |
              +------------+                     +-------------+
 ```
+
 ---
 
 **Notes:**
