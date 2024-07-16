@@ -1,8 +1,9 @@
-### Day-14 (16-07-2024)
+### Day-15 (16-07-2024)
 
 **Topics Covered:**
 - Azure File Sync
 - Snapshot
+- Swap OS disk
 
 ---
 
@@ -67,6 +68,20 @@
 **Procedure:**
 1. **Reference a Disk:** Create a snapshot from an existing disk.
 2. **Create a VM from the Snapshot:** Use the snapshot to create a new VM.
+
+---
+
+### Swap OS Disk
+
+**Description:**
+- Replacing the OS disk with a backup disk.
+
+**Process:**
+1. **Prepare a Backup OS Disk:**
+   - Ensure you have a ready-to-use backup disk.
+
+2. **Swap the OS Disk:**
+   - Replace the existing OS disk with the backup disk to restore or update the operating system.
 
 ---
 
