@@ -47,6 +47,35 @@
    - **AWS Equivalent:** SQS (Simple Queue Service).
 
 ---
+**Here’s a diagram illustrating the Azure Storage Services:**
+```
++-------------------------+      +---------------------------+
+|       Blob Storage      |      |        File Storage       |
+|-------------------------|      |---------------------------|
+|  - VM Disk Images       |      |  - File Shares            |
+|  - Media Files          |      |  - Lift-and-Shift Apps    |
+|  - Backups              |      |  - Shared Storage for VMs |
+|  - Log Data             |      |                           |
+|  Example:               |      |  Example:                 |
+|  - Image Hosting        |      |  - Departmental Shares    |
+|  - Video Streaming      |      |  - App Configuration      |
++-------------------------+      +---------------------------+
+
++-------------------------+      +---------------------------+
+|      Table Storage      |      |       Queue Storage       |
+|-------------------------|      |---------------------------|
+|  - User Profiles        |      |  - Task Management        |
+|  - Product Info         |      |  - Background Jobs        |
+|  - Metadata             |      |  - Message Queues         |
+|  - IoT Data             |      |                           |
+|  Example:               |      |  Example:                 |
+|  - IoT Sensor Data      |      |  - Order Processing System|
+|  - User Preferences     |      |  - Job Scheduling         |
++-------------------------+      +---------------------------+
+
+```
+
+---
 
 ### Diagram: Azure Storage Hierarchy and Redundancy
 
@@ -71,9 +100,11 @@ Tenant
 
 **Types of Redundant Storage:**
 1. **LRS (Locally Redundant Storage):**
-   - Three replicas in the same data center.
+   - Data is replicated three times within a single data center.
+   - Suitable for scenarios where data loss is acceptable only if the entire data center is lost.
 2. **GRS (Geo-Redundant Storage):**
-   - Three replicas in different data centers within the same region.
+   - Data is replicated three times within the primary region and asynchronously to another region.
+   - Provides higher durability and protection against regional disasters.
 3. **ZRS (Zone-Redundant Storage):**
    - Three replicas in different zones within the same region.
 4. **GZRS (Geo-Zone-Redundant Storage):**
@@ -81,6 +112,28 @@ Tenant
 
 **Note:**
 - **RA (Read Access):** Prefix used for types of redundancy that allow read access to the secondary location.
+
+```plaintext
+Redundancy:
+LRS
+   ├── Data Center 1
+   │    ├── Replica 1
+   │    ├── Replica 2
+   │    └── Replica 3
+
+GRS
+   ├── Primary Region
+   │    ├── Data Center 1
+   │    │    ├── Replica 1
+   │    │    ├── Replica 2
+   │    │    └── Replica 3
+   │    └── Data Center 2 (secondary region)
+   │         ├── Replica 4
+   │         ├── Replica 5
+   │         └── Replica 6
+```
+
+---
 
 **Replication Types:**
 - **Synchronous:** Updates changes immediately across replicas.
@@ -111,4 +164,65 @@ Tenant
 
 ---
 
+#### Steps to configure a Storage Account and BLOB Storage
+1. **Create a Storage Account:**
+   - **Portal:** Navigate to the Azure portal, click on "Create a resource," select "Storage account," and fill in the necessary details.
+   - **Details:** Choose the subscription, resource group, storage account name, and region. Select the desired performance (Standard or Premium), redundancy (LRS, GRS, etc.), and access tier (Hot, Cool, etc.).
+
+2. **Create a Container in BLOB Storage:**
+   - **Navigate:** Go to the newly created storage account, select "Containers" under the BLOB service section.
+   - **Create Container:** Click on "+ Container," enter the name, and set the public access level (Private, Blob, or Container).
+
+3. **Upload a Blob:**
+   - **Upload:** Inside the container, click on "Upload," select the file to upload, and click "Upload."
+
+```plaintext
+Storage Account Creation:
+Tenant
+   └── Subscription
+         └── Resource Group (RG)
+               └── Storage Account
+                     ├── BLOB
+                     │    ├── Container
+                     │    │    └── Blob (e.g., image.jpg)
+                     │    └── ...
+                     ├── FILE
+                     ├── TABLE
+                     └── QUEUE
+```
+
+---
+
+
+#### Security and Compliance Example
+1. **Encryption:**
+   - **At-Rest:** Data is encrypted using Azure Storage Service Encryption (SSE).
+   - **In-Transit:** Data is encrypted during transfer using HTTPS.
+
+2. **Access Control:**
+   - **RBAC:** Assign roles to users, such as Storage Blob Data Contributor.
+   - **ACLs:** Set permissions on individual containers and blobs.
+   - **SAS (Shared Access Signatures):** Provide limited access to storage account resources.
+
+3. **Compliance:**
+   - **GDPR:** Ensures data protection and privacy in the EU.
+   - **HIPAA:** Protects sensitive patient data in healthcare.
+   - **ISO:** International standards for data security.
+
+```plaintext
+Security and Compliance:
+   ├── Encryption
+   │    ├── At-Rest: SSE
+   │    └── In-Transit: HTTPS
+   ├── Access Control
+   │    ├── RBAC: Role assignments
+   │    ├── ACLs: Permissions on resources
+   │    └── SAS: Limited access tokens
+   └── Compliance
+        ├── GDPR
+        ├── HIPAA
+        └── ISO
+```
+
+This refined overview provides a comprehensive yet concise explanation of Azure Storage Services, focusing on key features, redundancy options, data management capabilities, security considerations, and includes detailed examples and diagrams for better understanding.
 This refined overview provides a comprehensive yet concise explanation of Azure Storage Services, focusing on key features, redundancy options, data management capabilities, and security considerations.
