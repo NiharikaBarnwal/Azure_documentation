@@ -153,8 +153,8 @@ Azure never lets you decrease a disk size because there may be a possiblity that
 **Description:**
 - Replacing the OS disk with a backup disk.
 
-**Advantage**
--IP of original server doesn't change
+**Advantage:**
+- IP of original server doesn't change
 
 **Process:**
 1. **Prepare a Backup OS Disk:**
