@@ -1,5 +1,7 @@
 ### Day-10 (08-07-2024)
 
+---
+
 #### Load Balancer
 
 When there is traffic on a server, two scaling methods are used to manage the load:
@@ -30,6 +32,9 @@ When there is traffic on a server, two scaling methods are used to manage the lo
                      +-------------------------+                 +-----------------+
 
 ```
+
+---
+
 **Terminologies:**
 - **Scale Out**: Increasing the number of VMs.
   - **Example**: Adding more VMs to handle increased traffic during peak hours.
@@ -46,6 +51,8 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 - **Private Load Balancer (ILB)**: Distributes traffic within a virtual network.
   - **Example**: An internal business application used by employees.
 
+---
+
 #### Additional Details
 
 **Health Probes:** Load balancers use health probes to check the availability of VMs. If a VM is down, the load balancer stops sending traffic to it.
@@ -56,6 +63,8 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 
 **Session Persistence:** Ensures that a user's session is consistently routed to the same VM.
 - **Example**: A user shopping on an e-commerce site continues to interact with the same VM during their session.
+
+---
 
 #### Diagram
 
@@ -82,5 +91,7 @@ Here's an enhanced diagram to illustrate the Load Balancer and scaling methods:
 Vertical Scaling: Increase VM size (e.g., VM 1 -> Larger VM)
 Horizontal Scaling: Add more VMs (e.g., VM 4, VM 5)
 ```
+
+---
 
 This diagram includes the health probes associated with each VM to indicate the health monitoring aspect of load balancing. This ensures that only healthy VMs receive traffic, maintaining high availability and reliability of the services.
