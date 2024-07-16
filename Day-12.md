@@ -1,5 +1,7 @@
 ### Day-12 (13-07-2024)
 
+---
+
 ### Azure Storage Services
 
 #### Storage Account (e.g., Google Drive)
@@ -44,13 +46,25 @@
    - **Usage:** Implements producer-consumer and publisher-subscriber patterns.
    - **AWS Equivalent:** SQS (Simple Queue Service).
 
-#### Hierarchy in Azure:
-```
+---
+
+### Diagram: Azure Storage Hierarchy and Redundancy
+
+```plaintext
 Tenant
    └── Subscription
          └── Resource Group (RG)
                └── Storage Account
+                     ├── BLOB
+                     │    ├── Block Blob
+                     │    ├── Page Blob
+                     │    └── Append Blob
+                     ├── FILE
+                     ├── TABLE
+                     └── QUEUE
 ```
+
+---
 
 #### Redundancy:
 **Definition:** Making multiple copies of data to avoid loss during failures.
@@ -89,25 +103,6 @@ Tenant
 - **Definition:** A copy of a blob at a specific point in time.
 - **Usage:** Enables backup and recovery operations.
   
----
-
-### Diagram: Azure Storage Hierarchy and Redundancy
-
-```plaintext
-Tenant
-   └── Subscription
-         └── Resource Group (RG)
-               └── Storage Account
-                     ├── BLOB
-                     │    ├── Block Blob
-                     │    ├── Page Blob
-                     │    └── Append Blob
-                     ├── FILE
-                     ├── TABLE
-                     └── QUEUE
-```
----
-
 #### Security and Compliance
 
 - **Encryption:** Provides at-rest and in-transit encryption.
