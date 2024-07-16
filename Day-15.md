@@ -146,7 +146,7 @@
 ---
 
 **Note:-**
-Azure never lets you decrease a disk size because their may be a possiblity that the disk is full.
+Azure never lets you decrease a disk size because there may be a possiblity that the disk is full.
 
 ### Swap OS Disk
 
