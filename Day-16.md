@@ -15,7 +15,7 @@
 1. **Managed Disk**
     - **Categories:** 
         - Standard HDD :
-              - Cost-effective storage for infrequently accessed data.
+          - Cost-effective storage for infrequently accessed data.
               - Scenario: Backup, non-critical, infrequent access
         - Standard SSD :
                 -  Better performance than HDD, suitable for web servers and lightly used applications.
