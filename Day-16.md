@@ -31,15 +31,15 @@
 **Specifications:**
 ```
 +------------------------------------------------------------------------------------------+ 
-|                    | Managed Disk                                    | Unmanaged Disk    |
+|                    |                 Managed Disk                    | Unmanaged Disk    |
 |--------------------|-------------------------------------------------|-------------------|
 |                    | Std HDD  | Std SSD   | Prem SSD  | Ultra Disk   | Std HDD | Std SSD |
-| **Min Size**       | 1 GB     | 1 GB      | 1 GB      | 4 GB         | 1 GB    | 1 GB    |
-| **Max Size**       | 32,767 GB| 32,767 GB | 32,767 GB | 64 TB        | 4 TB    | 4 TB    |
-| **IOPS Min**       | 500 MB   | 120 MB    | 120 MB    | 100 MB       | 500 MB  | 500 MB  |
-| **IOPS Max**       | 2,000 MB | 6,000 MB  | 20,000 MB | 1,600,000 MB | 500 MB  | 750 MB  |
-| **Throughput Min** |          | 25 MB     | 255 MB    | 25 MB        | 60 MB   | 100 MB  |
-| **Throughput Max** | 500 MB   | 750 MB    | 900 MB    | 2,000 MB     |         | 250 MB  |
+|   Min Size         | 1 GB     | 1 GB      | 1 GB      | 4 GB         | 1 GB    | 1 GB    |
+|   Max Size         | 32,767 GB| 32,767 GB | 32,767 GB | 64 TB        | 4 TB    | 4 TB    |
+|   IOPS Min         | 500 MB   | 120 MB    | 120 MB    | 100 MB       | 500 MB  | 500 MB  |
+|   IOPS Max         | 2,000 MB | 6,000 MB  | 20,000 MB | 1,600,000 MB | 500 MB  | 750 MB  |
+|   Throughput Min   |          | 25 MB     | 255 MB    | 25 MB        | 60 MB   | 100 MB  |
+|   Throughput Max   | 500 MB   | 750 MB    | 900 MB    | 2,000 MB     |         | 250 MB  |
 +------------------------------------------------------------------------------------------+
 ```
 
