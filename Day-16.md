@@ -8,10 +8,6 @@
 
 ---
 
-Here's an enhanced version of your notes with added details, examples, and diagrams:
-
----
-
 ### Persistent Disk
 
 **Types of Disks:**
