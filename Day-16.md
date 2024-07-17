@@ -14,10 +14,12 @@
 
 1. **Managed Disk**
     - **Categories:** 
-        - Standard HDD : - Cost-effective storage for infrequently accessed data.
-                         - Scenario: Backup, non-critical, infrequent access
-        - Standard SSD : - Better performance than HDD, suitable for web servers and lightly used applications.
-                         - Scenario: Web servers, lightly used enterprise applications and dev/test
+        - Standard HDD :
+              - Cost-effective storage for infrequently accessed data.
+              - Scenario: Backup, non-critical, infrequent access
+        - Standard SSD :
+                -  Better performance than HDD, suitable for web servers and lightly used applications.
+                - Scenario: Web servers, lightly used enterprise applications and dev/test
         - Premium SSD : - High-performance storage for mission-critical applications.
                         - Scenario: Production and performance sensitive workloads
         - Ultra Disk : - Ultra-high performance for data-intensive workloads.
