@@ -174,7 +174,7 @@
 
 **Configures/Connects an IP with a Domain Name**
 
-**Domain Registries:**
+**Domain Registries:** They are the websites where we can purchase domain names.
 - GoDaddy
 - Amazon
 - BidRock
