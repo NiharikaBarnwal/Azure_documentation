@@ -1,7 +1,11 @@
 ## Day-10 (08-07-2024) : Azure Basic Load Balancer
 
 ###Table of Content:-
-- [Introduction](#load-balancer)
+- [Load_Balancer](#load-balancer)
+- [Terminologies](#terminologies)
+- [Types](#load-balancer-types)
+- [Additional_Details](#additional-details)
+- [Diagram](#diagram)
 ---
 
 #### Load Balancer
@@ -37,7 +41,7 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 
 ---
 
-**Terminologies:**
+### Terminologies:
 - **Scale Out**: Increasing the number of VMs.
   - **Example**: Adding more VMs to handle increased traffic during peak hours.
 - **Scale In**: Decreasing the number of VMs.
