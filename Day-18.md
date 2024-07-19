@@ -154,4 +154,6 @@ Below is a simplified diagram of the Transformer architecture:
 +---------------+
 ```
 
-By incorporating these additional details and examples, the notes provide a more comprehensive understanding of the concepts and applications of generative AI and related technologies.
+---
+
+These notes provide a  comprehensive understanding of the concepts and applications of generative AI and related technologies.
