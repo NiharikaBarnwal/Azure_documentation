@@ -1,8 +1,12 @@
-### Day-11 (10-07-2024)
+## Day-11 (10-07-2024) : Azure Standard Load Balancer
 
+### Table of content:-
+- [NSG](#network-security-group-(nsg))
+- [Standard LB](#standard-load-balancer-(lb))
+- [note](#notes)
 ---
 
-#### Network Security Group (NSG)
+### Network Security Group (NSG)
 
 **NSG Attachment:**
 - **NSG can be attached at two levels:**
@@ -56,7 +60,7 @@
 
 ---
 
-#### Standard Load Balancer (LB)
+### Standard Load Balancer (LB)
 
 **Requirements:**
 - **VM SKU:** The VMs must have a Standard SKU.
@@ -98,7 +102,7 @@
 
 ---
 
-**Notes:**
+#### Notes:
 
 - **NSG Rules:**
   - **Inbound Security Rules:** Define the allowed inbound traffic. Example: Allow HTTP (port 80) and HTTPS (port 443) traffic.
