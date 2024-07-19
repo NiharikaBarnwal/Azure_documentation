@@ -1,7 +1,7 @@
 ## Day-10 (08-07-2024) : Azure Basic Load Balancer
 
 ###Table of Content:-
-- [Introduction](#Load Balancer)
+- [Introduction](#Load_Balancer)
 ---
 
 #### Load Balancer
