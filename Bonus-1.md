@@ -14,7 +14,6 @@
     - [Port Mapping and Web Server Configuration](#port-mapping-and-web-server-configuration)
 7. [Useful Docker Commands](#useful-docker-commands)
 8. [Enhancements and Examples](#enhancements-and-examples)
-9. [Diagrams and Visual Aids](#diagrams-and-visual-aids)
 
 ---
 
@@ -71,7 +70,7 @@ Product managers create a Software Requirements and Specification (SRS) document
 
 ## Basic Docker Setup
 
-### Creating Resources in Azure
+1. ### Creating Resources in Azure
 
 1. **Go to Azure Portal**
 2. **Create a Resource Group (RG):**
@@ -232,17 +231,6 @@ Product managers create a Software Requirements and Specification (SRS) document
 4. **Access the web server:**
    - Open a browser and navigate to `http://<VM_IP>:8080`
 
-## Diagrams and Visual Aids
-
-### Diagram: Docker Architecture
-
-![Docker Architecture](https://www.docker.com/sites/default/files/d8/2018-11/docker-hub-flow.png)
-
-### Diagram: Docker Container Lifecycle
-
-![Docker Container Lifecycle](https://miro.medium.com/max/700/1*Tc5yXhM8_P7uPfJb11x5Yg.png)
-
-These diagrams help visualize the architecture and lifecycle of Docker containers, providing a clearer understanding of how Docker works.
 
 ---
 
