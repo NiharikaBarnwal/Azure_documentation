@@ -2,8 +2,8 @@
 
 ### Table of Content:-
 - [Steps to Make Azure ML](#steps-to-make-azure-ml)
-- [URI vs. URL](#url-vs-url)
-- [API](#api-(application-programming-interface))
+- [URI vs. URL](#uri-vs-url)
+- [API (Application Programming Interface)](#api-application-programming-interface)
 - [Serverless API with Azure AI Content Safety](#serverless-api-with-azure-ai-content-safety)
 - [Azure CLI](#azure-cli)
 - [Virtual Environment](#virtual-environment)
