@@ -2,9 +2,6 @@
 
 ### Table of Content:-
 - [Steps to Make Azure ML](#steps-to-make-azure-ml)
-- [Visual Example and Diagram](#visual-example-and-diagram)
-  - [Azure ML Workspace Setup](#azure-ml-workspace-setup)
-  - [Chatbot Deployment Workflow](#chatbot-deployment-workflow)
 - [URI vs. URL](#url-vs.-url)
 - [API](#api-(application-programming-interface))
 - [Serverless API with Azure AI Content Safety](#serverless-api-with-azure-ai-content-safety)
@@ -104,29 +101,6 @@
 **11. Configure Inbound Rule for Port 8080**
 - In the Azure portal, navigate to your VM's network security group (NSG).
 - Add an inbound security rule to allow traffic on port 8080.
-
----
-
-### Visual Example and Diagram
-
-#### Azure ML Workspace Setup
-1. **Create Resource Group**:
-   ![Create Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/media/create-resource-group-portal/create-resource-group.png)
-
-2. **Create Azure ML Workspace**:
-   ![Create Azure ML Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/media/tutorial-1st-experiment-automated-ml/create-azure-ml-workspace.png)
-
-#### Chatbot Deployment Workflow
-1. **Azure CLI Installation and Login**:
-   ```sh
-   az login
-   ```
-
-2. **Virtual Machine Configuration**:
-   ![Create VM](https://docs.microsoft.com/en-us/azure/virtual-machines/media/quick-create-portal/create-vm.png)
-
-3. **Inbound Security Rule for Port 8080**:
-   ![Inbound Rule](https://docs.microsoft.com/en-us/azure/virtual-network/media/tutorial-filter-network-traffic/create-nsg-rule.png)
 
 ---
 
