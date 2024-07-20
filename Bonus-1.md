@@ -70,7 +70,7 @@ Product managers create a Software Requirements and Specification (SRS) document
 
 ## Basic Docker Setup
 
-### 1. Creating Resources in Azure
+### Creating Resources in Azure
 
 1. **Go to Azure Portal**
 2. **Create a Resource Group (RG):**
@@ -83,7 +83,7 @@ Product managers create a Software Requirements and Specification (SRS) document
    - Allow all ports
    - Leave other settings as default
 
-### 2. Installing Docker on Ubuntu VM
+### Installing Docker on Ubuntu VM
 
 1. **Connect to the VM using SSH:**
    ```bash
