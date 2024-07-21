@@ -8,7 +8,7 @@
 4. [Understanding Hypervisors and Dependencies](#understanding-hypervisors-and-dependencies)
 5. [Benefits of Docker](#benefits-of-docker)
 6. [Basic Docker Setup](#basic-docker-setup)
-    - [Creating Resources in Azure](#creating-resources-in-azure)
+    - [Creating Resources in Azure](#1-creating-resources-in-azure)
     - [Installing Docker on Ubuntu VM](#installing-docker-on-ubuntu-vm)
     - [Working with Docker Containers](#working-with-docker-containers)
     - [Port Mapping and Web Server Configuration](#port-mapping-and-web-server-configuration)
@@ -70,7 +70,7 @@ Product managers create a Software Requirements and Specification (SRS) document
 
 ## Basic Docker Setup
 
-### Creating Resources in Azure
+### 1. Creating Resources in Azure
 
 1. **Go to Azure Portal**
 2. **Create a Resource Group (RG):**
