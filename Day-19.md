@@ -87,7 +87,7 @@
   Ensure your `requirements.txt` contains all the necessary dependencies.
 
 **10. Upload and Run Your Code**
-- Upload your code to the VM, typically in the `Downloads` folder.
+- Upload your code to the VM, typically in the `inetpub` folder.
 - Open the command prompt or terminal and navigate to your project directory.
 - Run the following to install packages:
   ```sh
