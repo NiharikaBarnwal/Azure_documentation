@@ -80,11 +80,6 @@
 
 **9. Install Python and Necessary Packages**
 - Ensure Python is installed on your VM.
-- Install the required packages using:
-  ```sh
-  pip install -r requirements.txt
-  ```
-  Ensure your `requirements.txt` contains all the necessary dependencies.
 
 **10. Upload and Run Your Code**
 - Upload your code to the VM, typically in the `inetpub` folder.
@@ -93,6 +88,7 @@
   ```sh
   pip install -r requirements.txt
   ```
+  Ensure your `requirements.txt` contains all the necessary dependencies.
 - Navigate to the chat folder and run:
   ```sh
   streamlit run chat_fe.py --server.port 8080
