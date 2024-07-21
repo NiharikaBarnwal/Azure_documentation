@@ -2,18 +2,18 @@
 
 ## Table of Contents
 
-1. [Introduction to Docker](#introduction-to-docker)
-2. [Software Requirements and Specification (SRS)](#software-requirements-and-specification-srs)
-3. [Steps to Create an Application](#steps-to-create-an-application)
-4. [Understanding Hypervisors and Dependencies](#understanding-hypervisors-and-dependencies)
-5. [Benefits of Docker](#benefits-of-docker)
-6. [Basic Docker Setup](#basic-docker-setup)
+- [Introduction to Docker](#introduction-to-docker)
+- [Software Requirements and Specification (SRS)](#software-requirements-and-specification-srs)
+- [Steps to Create an Application](#steps-to-create-an-application)
+- [Understanding Hypervisors and Dependencies](#understanding-hypervisors-and-dependencies)
+- [Benefits of Docker](#benefits-of-docker)
+- [Basic Docker Setup](#basic-docker-setup)
     - [Creating Resources in Azure](#1-creating-resources-in-azure)
     - [Installing Docker on Ubuntu VM](#2-installing-docker-on-ubuntu-vm)
     - [Working with Docker Containers](#3-working-with-docker-containers)
     - [Port Mapping and Web Server Configuration](#4-port-mapping-and-web-server-configuration)
-7. [Useful Docker Commands](#useful-docker-commands)
-8. [Examples](#examples)
+- [Useful Docker Commands](#useful-docker-commands)
+- [Examples](#examples)
 
 ---
 
