@@ -82,7 +82,7 @@
 - Ensure Python is installed on your VM.
 
 **10. Upload and Run Your Code**
-- Upload your code to the VM, typically in the `inetpub` folder.
+- Upload your code to the VM, typically in the `inetpub/wwwroot` folder.
 - Open the command prompt or terminal and navigate to your project directory.
 - Run the following to install packages:
   ```sh
