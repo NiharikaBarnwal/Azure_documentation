@@ -9,9 +9,9 @@
 5. [Benefits of Docker](#benefits-of-docker)
 6. [Basic Docker Setup](#basic-docker-setup)
     - [Creating Resources in Azure](#1-creating-resources-in-azure)
-    - [Installing Docker on Ubuntu VM](#installing-docker-on-ubuntu-vm)
-    - [Working with Docker Containers](#working-with-docker-containers)
-    - [Port Mapping and Web Server Configuration](#port-mapping-and-web-server-configuration)
+    - [Installing Docker on Ubuntu VM](#2-installing-docker-on-ubuntu-vm)
+    - [Working with Docker Containers](#3-working-with-docker-containers)
+    - [Port Mapping and Web Server Configuration](#4-port-mapping-and-web-server-configuration)
 7. [Useful Docker Commands](#useful-docker-commands)
 8. [Enhancements and Examples](#enhancements-and-examples)
 
@@ -83,7 +83,7 @@ Product managers create a Software Requirements and Specification (SRS) document
    - Allow all ports
    - Leave other settings as default
 
-### Installing Docker on Ubuntu VM
+### 2. Installing Docker on Ubuntu VM
 
 1. **Connect to the VM using SSH:**
    ```bash
@@ -109,7 +109,7 @@ Product managers create a Software Requirements and Specification (SRS) document
    systemctl enable docker
    ```
 
-### Working with Docker Containers
+### 3. Working with Docker Containers
 
 1. **Check for existing Docker containers and images:**
    ```bash
@@ -123,7 +123,7 @@ Product managers create a Software Requirements and Specification (SRS) document
    docker container run ubuntu
    ```
 
-### Port Mapping and Web Server Configuration
+### 4. Port Mapping and Web Server Configuration
 
 1. **Run a Docker container with port mapping:**
    ```bash
