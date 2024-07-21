@@ -13,7 +13,7 @@
     - [Working with Docker Containers](#3-working-with-docker-containers)
     - [Port Mapping and Web Server Configuration](#4-port-mapping-and-web-server-configuration)
 7. [Useful Docker Commands](#useful-docker-commands)
-8. [Enhancements and Examples](#enhancements-and-examples)
+8. [Examples](#examples)
 
 ---
 
@@ -191,7 +191,7 @@ Product managers create a Software Requirements and Specification (SRS) document
 
 - **Note:** The `vi` editor is not installed by default in Docker containers, so using `vi <filename>` will not work without installation.
 
-## Enhancements and Examples
+## Examples
 
 ### Example: Running a Simple Web Server in a Docker Container
 
@@ -234,4 +234,4 @@ Product managers create a Software Requirements and Specification (SRS) document
 
 ---
 
-This enhanced guide provides a comprehensive overview of Docker, from its basic setup to advanced usage examples. The inclusion of diagrams and detailed steps ensures a better grasp of Docker's capabilities and applications.
+This guide provides a comprehensive overview of Docker, from its basic setup to advanced usage examples. The inclusion of diagrams and detailed steps ensures a better grasp of Docker's capabilities and applications.
