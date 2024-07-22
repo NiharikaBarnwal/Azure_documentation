@@ -1,6 +1,7 @@
-## Day-19 (20-07-2024) : Azure Gen AI Part 2
+## Day-19 (20-07-2024) : Project-1
 
 ### Table of Content:-
+- [About the Projrct](#text-completion-with-llama-3)
 - [Steps to Make Azure ML](#steps-to-make-azure-ml)
 - [URI vs. URL](#uri-vs-url)
 - [API (Application Programming Interface)](#api-application-programming-interface)
@@ -10,8 +11,15 @@
 - [Example Code Setup](#example-code-setup)
 
 ---
+### Text Completion with Llama 3 🦙
 
-### Steps to Make Azure ML
+A simple yet effective demonstration of text completion using the Llama 3 model. Perfect for understanding the basics of large language models.
+
+- Invokes Llama 3 for text generation
+- Demonstrates basic prompt-response interactions
+- Explores model parameters and their effects
+
+### Steps to Make the Project
 
 **1. Create a Resource Group (RG)**
 - Navigate to the Azure portal.
@@ -150,4 +158,4 @@
 
 ---
 
-This guide provides a comprehensive approach to setting up Azure ML and deploying a chatbot, complete with detailed steps, visual aids, and example code.
+This guide provides a comprehensive approach to setting up and deploying a Text Completion chatbot with Llama 3, complete with detailed steps, visual aids, and example code.
