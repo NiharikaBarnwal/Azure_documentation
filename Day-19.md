@@ -1,7 +1,7 @@
 ## Day-19 (20-07-2024) : Project-1
 
 ### Table of Content:-
-- [About the Projrct](#text-completion-with-llama-3)
+- [About the Projrct](#text-completion-with-llama-3-🦙)
 - [Steps to Make Azure ML](#steps-to-make-azure-ml)
 - [URI vs. URL](#uri-vs-url)
 - [API (Application Programming Interface)](#api-application-programming-interface)
