@@ -1,6 +1,6 @@
-## Day-10 (08-07-2024) : Azure Basic Load Balancer
+# Day-10 (08-07-2024) : Azure Basic Load Balancer
 
-### Table of Content:-
+## Table of Content:-
 - [Load_Balancer](#load-balancer)
 - [Terminologies](#terminologies)
 - [Types](#load-balancer-types)
@@ -8,7 +8,7 @@
 - [Diagram](#diagram)
 ---
 
-#### Load Balancer
+## Load Balancer
 
 When there is traffic on a server, two scaling methods are used to manage the load:
 - **Increasing VM Size (Vertical Scaling)**:
@@ -41,7 +41,7 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 
 ---
 
-### Terminologies:
+## Terminologies:
 - **Scale Out**: Increasing the number of VMs.
   - **Example**: Adding more VMs to handle increased traffic during peak hours.
 - **Scale In**: Decreasing the number of VMs.
@@ -51,7 +51,7 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 - **Internal Facing**: If internal traffic is involved, a Private Load Balancer (ILB) is used.
   - **Example**: An internal application used within an organization's network.
 
-### Load Balancer Types:
+## Load Balancer Types:
 - **Public Load Balancer (PLB)**: Distributes incoming internet traffic to VMs.
   - **Example**: A website hosted on multiple VMs behind a PLB.
 - **Private Load Balancer (ILB)**: Distributes traffic within a virtual network.
@@ -59,7 +59,7 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 
 ---
 
-#### Additional Details
+## Additional Details
 
 **Health Probes:** Load balancers use health probes to check the availability of VMs. If a VM is down, the load balancer stops sending traffic to it.
 - **Example**: HTTP health probe checks if the web server on a VM returns a 200 OK response.
@@ -72,7 +72,7 @@ When there is traffic on a server, two scaling methods are used to manage the lo
 
 ---
 
-#### Diagram
+## Diagram
 
 Here's an enhanced diagram to illustrate the Load Balancer and scaling methods:
 
