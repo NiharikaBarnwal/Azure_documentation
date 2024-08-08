@@ -1,21 +1,29 @@
-### Day-14 (15-07-2024)
+# Day-14 (15-07-2024) : Azure Static Website Hosting Storage Explorer
 
-**Topics Covered:**
-- Static Website Hosting
-- Storage Explorer
-- Managed and Unmanaged Disks
+## Table of Contents
+ - [Static Website Hosting](#static-website-hosting)
+     - [VM Configuration as a Web Server](#vm-configuration-as-a-web-server)
+     - [Advantages of Static Website Hosting](#advantages-of-static-website-hosting)
+     - [Diagram: Static Website Hosting Setup](#diagram-static-website-hosting-setup)
+ - [Azure Storage Explorer](#azure-storage-explorer)
+     - [Use Cases](#use-cases)
+     - [Diagram: Azure Storage Explorer Use Cases](#diagram-azure-storage-explorer-use-cases)
+ - [Types of Test Storage](#types-of-test-storage)
+     - [Managed Disk](#managed-disk)
+     - [Unmanaged Disk](#unmanaged-disk)
+     - [Diagram: Managed vs. Unmanaged Disks](#diagram-managed-vs-unmanaged-disks)
 
 ---
 
-### Static Website Hosting
+## Static Website Hosting
 
-**VM Configuration as a Web Server:**
+### VM Configuration as a Web Server:
 - **Windows:** Internet Information Services (IIS)
   - **Example:** Hosting a company’s internal documentation site.
 - **Linux:** Apache2
   - **Example:** Hosting a personal blog or portfolio.
 
-**Advantages of Static Website Hosting:**
+### Advantages of Static Website Hosting:
 - **Ease of Use:** Provides a URL, HTTPS, and certificate automatically.
   - **Example:** Azure Static Web Apps automatically configures HTTPS for your custom domain.
 - **Cost-Effective:** Cheaper and easier to manage compared to dynamic websites.
@@ -23,7 +31,7 @@
 - **Simplified Management:** Requires less maintenance and management.
   - **Example:** No need to manage server-side code or databases.
 
-**Diagram: Static Website Hosting Setup**
+### Diagram: Static Website Hosting Setup
 ```plaintext
 +-------------------+
 | Static Website    |
@@ -41,15 +49,15 @@
 +-------------------+
 ```
 
-### Azure Storage Explorer
+## Azure Storage Explorer
 
-**Use Cases:**
+### Use Cases:
 1. **Replicating a VM to Another VM:**
    - **Example:** Creating a backup of a production VM to a test environment.
 2. **Replicating from One Tenant to Another Tenant:**
    - **Example:** Migrating data from a development tenant to a production tenant for deployment.
 
-**Diagram: Azure Storage Explorer Use Cases**
+### Diagram: Azure Storage Explorer Use Cases
 ```plaintext
 +-------------------+       +-------------------+
 | VM in Tenant A    |       | VM in Tenant B    |
@@ -67,9 +75,9 @@
 +-------------------+       +-------------------+
 ```
 
-### Types of Test Storage
+## Types of Test Storage
 
-**Managed Disk:**
+### Managed Disk:
 - **Management:** Managed by Azure.
   - **Example:** Azure Premium SSD Managed Disks.
 - **Ease of Use:** Simplifies management with built-in features.
@@ -82,7 +90,7 @@
   - **Example:** Azure Backup service.
 - **Cost:** Higher cost due to additional features and management.
 
-**Unmanaged Disk:**
+### Unmanaged Disk:
 - **Management:** Managed by the user.
   - **Example:** Manually attaching and managing VHD files.
 - **Simplicity:** Simpler setup and configuration.
@@ -91,7 +99,7 @@
   - **Example:** Development environments with tight budgets.
 - **Cost:** Lower cost, but requires more manual management and monitoring.
 
-**Diagram: Managed vs. Unmanaged Disks**
+### Diagram: Managed vs. Unmanaged Disks
 ```plaintext
 +-------------------+       +-------------------+
 | Managed Disk      |       | Unmanaged Disk    |
