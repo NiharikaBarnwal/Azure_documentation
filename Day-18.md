@@ -1,8 +1,19 @@
-### Day-18 (19-07-2024)
+# Day-18 (19-07-2024)
 
 ---
+## Table of Contents
 
-### Generative AI
+1. [Generative AI](#generative-ai)
+2. [Large Language Model (LLM)](#large-language-model-llm)
+3. [Key Factors in Generative AI Performance](#key-factors-in-generative-ai-performance)
+4. [Neural Networks](#neural-networks)
+5. [Recurrent Neural Networks (RNN)](#recurrent-neural-networks-rnn)
+6. [Natural Language Processing (NLP)](#natural-language-processing-nlp)
+7. [Transformers](#transformers)
+8. [Generation Techniques](#generation-techniques)
+9. [Fine-Tuning Types](#fine-tuning-types)
+
+## Generative AI
 
 Generative AI refers to artificial intelligence systems that can generate various forms of content such as text, images, video, and audio. Examples include:
 - **ChatGPT** for text generation
@@ -11,13 +22,13 @@ Generative AI refers to artificial intelligence systems that can generate variou
 - **Whisper** for speech-to-text and text-to-speech
 - **Gemini** and **LLaMA** for text and multimodal content
 
-### Large Language Model (LLM)
+## Large Language Model (LLM)
 
 Large Language Models (LLMs) are AI systems that understand and generate human language. They are trained on vast datasets to predict and produce coherent language.
 
 **Input (Prompt)** → **LLM** → **Output (Completion)**
 
-### Key Factors in Generative AI Performance
+## Key Factors in Generative AI Performance
 
 The performance of a generative AI depends on:
 - **Architecture:** The design and structure of the AI model.
@@ -30,7 +41,7 @@ The performance of a generative AI depends on:
 
 Despite the difference in parameters, these models are comparably capable, with Claude being particularly strong in technical fields, illustrating that model performance is not solely determined by parameter count.
 
-### Neural Networks
+## Neural Networks
 
 Neural networks are the foundation of many AI models and consist of:
 - **Weights and Biases:** Core components that adjust during training.
@@ -38,14 +49,14 @@ Neural networks are the foundation of many AI models and consist of:
 - **Best for Numerical and Symbolic Data:** Neural networks excel in processing structured data.
 - They are highly effective for image recognition tasks. They process images by converting them into pixel matrices and applying convolutional layers to detect features like edges, textures, and shapes.
 
-### Recurrent Neural Networks (RNN)
+## Recurrent Neural Networks (RNN)
 
 - RNNs are designed for sequential data like text.
 - They retain information from previous steps to influence current processing, but they struggle with large datasets due to issues like vanishing gradients.
 - RNNs can analyze sequences of text to determine sentiment.
 - For example, in movie reviews, an RNN might consider previous words to understand context and predict whether a review is positive or negative.
 
-### Natural Language Processing (NLP)
+## Natural Language Processing (NLP)
 
 NLP involves converting human language into embeddings (vector representations) that AI models can process. This field encompasses various techniques to understand and generate human language.
 
@@ -74,7 +85,7 @@ Diagram: NLP Workflow
 |  (Generated Lang)   |
 +---------------------+
 ```
-### Transformers
+## Transformers
 
 In 2017, the "Attention is All You Need" paper by a team from Google Brain and the University of Toronto introduced the Transformer architecture, revolutionizing generative AI. Key components of Transformers include:
 - **Encoder:** Converts input into embeddings.
@@ -107,7 +118,7 @@ Diagram: Transformer Architecture
 +---------------------+
 ```
 
-### Generation Techniques
+## Generation Techniques
 
 Generative AI models can be created and improved using two main techniques:
 1. **Prompt Engineering:** Crafting effective prompts to guide the AI in generating desired outputs.
@@ -117,7 +128,7 @@ Generative AI models can be created and improved using two main techniques:
 - **One-Shot Learning:** The model learns from a single example.
 - **Few-Shot Learning:** The model learns from a few examples.
 
-### Fine-Tuning Types
+## Fine-Tuning Types
 
 1. **Full Fine-Tuning:**
    - Adjusts all parameters of an existing model.
@@ -126,7 +137,7 @@ Generative AI models can be created and improved using two main techniques:
 2. **Parameter-Efficient Fine-Tuning (PEFT):**
    - Adjusts only a subset of parameters, making the process more efficient and reducing the risk of forgetting.
 
-### Diagram of Transformer Architecture
+## Diagram of Transformer Architecture
 
 Below is a simplified diagram of the Transformer architecture:
 
