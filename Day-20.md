@@ -1,4 +1,4 @@
-# Project-2: Retrieval Augmented Generation (RAG)
+# Day-20 : Project-2 (RAG application using LLaMa and OpenAI)
 
 ## Table of Contents
 1. [Introduction](#introduction)
