@@ -1,29 +1,33 @@
-## Day-11 (10-07-2024) : Azure Standard Load Balancer
+# Day-11 (10-07-2024) : Azure Standard Load Balancer
 
-### Table of content:-
+## Table of content:-
 - [NSG](#network-security-group-(nsg))
+  - [NSG Attachment](#nsg-attachment)
+  - [NSG and NIC Relationship](#nsg-and-nic-relationship)
+  - [Examples](#examples)
+  - [Diagram](#diagram)
 - [Standard LB](#standard-load-balancer-(lb))
-- [note](#notes)
+- [Notes](#notes)
+  - [NSG Rules](#nsg-rules)
+  - [NSG Best Practices](#nsg-best-practices)
+  - [Standard Load Balancer Features](#standard-load-balancer-features)
 ---
 
-### Network Security Group (NSG)
+## Network Security Group (NSG)
 
-**NSG Attachment:**
+### NSG Attachment:
 - **NSG can be attached at two levels:**
   - **VM Level:** Directly attached to the Network Interface Card (NIC) of a VM.
   - **Subnet Level:** Applied to all VMs within the subnet.
 
-**NSG and NIC Relationship:**
+### NSG and NIC Relationship:
 - **NSG is attached to NIC:** The NIC is then attached to the VM.
 - **Single NIC:** A single NIC can be attached to only one VM at a time, but a VM can have multiple NICs.
 
-**Examples:**
-- **VM Level:** An NSG attached to a NIC of a VM controls inbound and outbound traffic for that specific VM.
-- **Subnet Level:** An NSG applied to a subnet controls traffic for all VMs within that subnet.
-
-**Detailed Example:**
+### Examples:
 
 1. **VM Level NSG:**
+   - An NSG attached to a NIC of a VM controls inbound and outbound traffic for that specific VM.
    - **Scenario:** You have a VM hosting a web application that should only be accessible via HTTP (port 80) and HTTPS (port 443) but needs to block all other traffic.
    - **Steps:**
      1. Create an NSG.
@@ -31,13 +35,14 @@
      3. Attach the NSG to the NIC of the VM.
   
 2. **Subnet Level NSG:**
+   - An NSG applied to a subnet controls traffic for all VMs within that subnet.
    - **Scenario:** You have a subnet with multiple VMs, and you want to apply a uniform security policy that allows only SSH (port 22) and RDP (port 3389) traffic.
    - **Steps:**
      1. Create an NSG.
      2. Add inbound security rules to allow traffic on ports 22 and 3389.
      3. Attach the NSG to the subnet.
 
-**Diagram:**
+### Diagram:
 
 ```plaintext
 +------------------------------------------+          +------------------------------------------+      
@@ -60,7 +65,7 @@
 
 ---
 
-### Standard Load Balancer (LB)
+## Standard Load Balancer (LB)
 
 **Requirements:**
 - **VM SKU:** The VMs must have a Standard SKU.
@@ -102,17 +107,17 @@
 
 ---
 
-#### Notes:
+## Notes:
 
-- **NSG Rules:**
+### NSG Rules:
   - **Inbound Security Rules:** Define the allowed inbound traffic. Example: Allow HTTP (port 80) and HTTPS (port 443) traffic.
   - **Outbound Security Rules:** Define the allowed outbound traffic. Example: Allow all outbound internet traffic.
 
-- **NSG Best Practices:**
+### NSG Best Practices:
   - **Least Privilege Principle:** Only allow the necessary ports and IP ranges.
   - **Monitoring:** Use Azure Monitor and Network Watcher to monitor NSG traffic.
 
-- **Standard Load Balancer Features:**
+### Standard Load Balancer Features:
   - **High Availability:** Distributes traffic across multiple VMs for reliability.
   - **Health Probes:** Continuously checks the status of VMs to ensure traffic is only sent to healthy instances.
   - **Cross-Zone Load Balancing:** Distributes traffic across VMs in different availability zones for higher resilience.
