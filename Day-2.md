@@ -11,7 +11,7 @@
   - [Router](#router)
   - [Amplifier](#amplifier)
 - [Network Protocols](#network-protocols)
-  - [TCP/IP Protocol](#tcp-ip-protocol)
+  - [TCP/IP Protocol](#tcpip-protocol)
   - [UDP Protocol](#udp-protocol)
 - [Azure vs AWS](#azure-vs-aws)
 - [Security Considerations](#security-considerations)
