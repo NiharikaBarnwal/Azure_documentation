@@ -3,7 +3,7 @@
 ## Table of Content:-
 - [Load_Balancer](#load-balancer)
 - [Terminologies](#terminologies)
-- [Types](#load-balancer-types)
+- [Load Balancer Types](#load-balancer-types)
 - [Additional_Details](#additional-details)
 - [Diagram](#diagram)
 ---
