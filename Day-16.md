@@ -1,14 +1,37 @@
-### Day-16 (17-07-2024)
+# Day-16 (17-07-2024) : Azure Persistent Disk CDN
 
-**Topics Covered:**
-- Persistent disk
-- CDN
-- App services
-- Azure DNS
+## Table of Contents
+1. [Day-16 (17-07-2024)](#day-16-17-07-2024)
+   - [Persistent Disk](#persistent-disk)
+     - [Types of Disks](#types-of-disks)
+     - [Specifications](#specifications)
+     - [Key Concepts](#key-concepts)
+     - [Redundancy Support](#redundancy-support)
+     - [Shared Volume Support](#shared-volume-support)
+     - [Usability as OS disk](#usability-as-os-disk)
+     - [Diagram](#diagram)
+   - [CDN (Content Delivery Network)](#cdn-content-delivery-network)
+     - [AWS Equivalent](#aws-equivalent)
+     - [Direct Benefits](#direct-benefits)
+     - [Indirect Benefits](#indirect-benefits)
+     - [Steps to Implement CDN](#steps-to-implement-cdn)
+     - [Diagram](#diagram-1)
+   - [App Services](#app-services)
+     - [Examples](#examples)
+     - [Requirements](#requirements)
+     - [Benefits](#benefits)
+     - [Steps to Implement App Services](#steps-to-implement-app-services)
+     - [Diagram](#diagram-2)
+   - [Azure DNS](#azure-dns)
+     - [Domain Registries](#domain-registries)
+     - [AWS Equivalent](#aws-equivalent-1)
+     - [Types of Records](#types-of-records)
+     - [Steps to Configure Azure DNS](#steps-to-configure-azure-dns)
+     - [Diagram](#diagram-3)
 
 ---
 
-### Persistent Disk
+## Persistent Disk
 
 **Types of Disks:**
 
@@ -83,7 +106,7 @@
 
 ---
 
-### CDN (Content Delivery Network)
+## CDN (Content Delivery Network)
 
 **AWS Equivalent:**
 - **CloudFront**
@@ -128,7 +151,7 @@
 
 ---
 
-### App Services
+## App Services
 
 **Platform as a Service (PaaS) for Small Businesses and Small Scale Deployments**
 
@@ -174,7 +197,7 @@
 
 ---
 
-### Azure DNS
+## Azure DNS
 
 **Configures/Connects an IP with a Domain Name**
 
