@@ -6,8 +6,6 @@ Over the course of nearly one month, I had the opportunity to delve into various
 
 The notes for each day of the internship are organized in separate files, providing a detailed account of the topics discussed and the steps taken.
 
-This repository also includes details about the two projects completed during the internship:
-1. Project 1: [Text Completion with Llama 3]
-2. Project 2: [RAG application using LLaMa and OpenAI]
+This repository also includes details about the two projects completed during the internship.
 
 Contributions are welcome! If you find any errors or have suggestions for improvements, please create a pull request or open an issue.
