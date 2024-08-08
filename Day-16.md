@@ -31,7 +31,7 @@
 
 ## Persistent Disk
 
-**Types of Disks:**
+### Types of Disks:
 
 1. **Managed Disk**
     - **Categories:** 
@@ -53,7 +53,7 @@
         - Standard HDD : Similar to managed Standard HDD but requires manual management.
         - Standard SSD : Similar to managed Standard SSD but requires manual management.
 
-**Specifications:**
+### Specifications:
 ```
 +------------------------------------------------------------------------------------------+ 
 |                    |                 Managed Disk                    | Unmanaged Disk    |
@@ -68,22 +68,22 @@
 +------------------------------------------------------------------------------------------+
 ```
 
-**Key Concepts:**
+### Key Concepts:
 
 - **IOPS (Input/Output Operations Per Second):** Qualitative measure indicating how many read/write operations can be performed per second.
 - **Throughput:** Quantitative measure indicating the amount of data (in MB/KB) that can be read or written per second.
 
-**Redundancy Support:**
+### Redundancy Support:
 - **LRS (Locally Redundant Storage):** Supports all managed disk types.
 - **ZRS (Zone Redundant Storage):** Supports only Standard SSD and Premium SSD.
 
-**Shared Volume Support:**
+### Shared Volume Support:
 - Only Premium SSD and Ultra Disk support shared volumes.
 
-**Usability as OS disk**
+### Usability as OS disk
 - Ultra disk cannot be used as OS disk
 
-**Diagram**
+### Diagram
 ```
 +---------------------+
 |     Managed Disk    |
@@ -106,18 +106,18 @@
 
 ## CDN (Content Delivery Network)
 
-**AWS Equivalent:**
+### AWS Equivalent:
 - **CloudFront**
 
-**Direct Benefits:**
+### Direct Benefits:
 - **Reduced Latency:** By reducing the number of hops, latency decreases. POP (Point of Presence) edge locations store cached content, thus reducing latency.
 
-**Indirect Benefits:**
+### Indirect Benefits:
 - **Load Reduction:** Reduces the load on the origin server.
 - **Increased Security:** Enhances security by distributing content.
 - **Higher Uptime:** Improves the overall uptime of the service.
 
-**Steps to Implement CDN:**
+### Steps to Implement CDN:
 1. **Create a Resource Group.**
 2. **Create a Storage Account:**
     - Fill in the required details.
@@ -131,7 +131,7 @@
 6. **Endpoint Hostname:**
     - The generated endpoint hostname is provided to the on-premise service provider/developer.
 
-**Diagram**
+### Diagram
 ```
 +---------------------+
 |     CDN Profile     |
@@ -153,21 +153,21 @@
 
 **Platform as a Service (PaaS) for Small Businesses and Small Scale Deployments**
 
-**Examples:**
+### Examples:
 - Portfolios
 - Resumes
 
-**Requirements:**
+### Requirements:
 - Define the tech stack.
 - Define the database server.
 - Source code.
 - Docker image.
 
-**Benefits:**
+### Benefits:
 - Provides a DNS for web/app server access.
 - Cost-effective solution.
 
-**Steps to Implement App Services:**
+### Steps to Implement App Services:
 1. **Create a GitHub Repository and Upload Files.**
 2. **Create a Resource Group.**
 3. **Create a Static Web App:**
@@ -179,7 +179,7 @@
 4. **Access URL:**
     - The generated URL displays the deployed content.
 
-**Diagram**
+### Diagram
 ```
 +---------------------+
 |   Static Web App    |
@@ -199,7 +199,8 @@
 
 **Configures/Connects an IP with a Domain Name**
 
-**Domain Registries:** They are the websites where we can purchase domain names.
+### Domain Registries:
+They are the websites where we can purchase domain names.
 - GoDaddy
 - Amazon
 - BidRock
@@ -209,10 +210,10 @@
 - Hover
 - Bluehost
 
-**AWS Equivalent:**
+### AWS Equivalent:
 - **Route 53**
 
-**Types of Records:**
+### Types of Records:
 - **NS (Name Server):** Changes the domain name configuration.
 - **SOA (Start of Authority):** Authorizes the domain name.
 - **A (Alias):** Maps the IPv4 with the domain name.
@@ -220,7 +221,7 @@
 - **CNAME:** Provides a certification to the website.
 - **MX (Mail Exchange):** Supports email services.
 
-**Steps to Configure Azure DNS:**
+### Steps to Configure Azure DNS:
 1. **Purchase a Domain Name from a Domain Registry.**
 2. **Create a Resource Group.**
 3. **Create a VM:**
@@ -234,7 +235,7 @@
     - Paste the IP of the VM.
     - Add other details (e.g., names like www, app, etc.).
 
-**Diagram**
+### Diagram
 ```
 +---------------------+
 |     Domain Name     |
