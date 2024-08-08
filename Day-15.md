@@ -1,25 +1,43 @@
-### Day-15 (16-07-2024)
+# Day-15 (16-07-2024) : Azure File Sync, Snapshot, and Swap OS
 
-**Topics Covered:**
-- Azure File Sync
-- Snapshot
-- Swap OS Disk
+## Table of Contents
+
+ - [On-Premises Servers/Setup](#on-premises-serverssetup)
+     - [Managed by](#managed-by)
+     - [Challenges](#challenges)
+ - [Solution: Syncing Azure Services with On-Premises Servers](#solution-syncing-azure-services-with-on-premises-servers)
+     - [Advantages](#advantages)
+     - [Important Note](#important-note)
+     - [Diagram: On-Premises and Azure Sync Setup](#diagram-on-premises-and-azure-sync-setup)
+ - [Steps for Azure File Sync](#steps-for-azure-file-sync)
+     - [Diagram: Azure File Sync Process](#diagram-azure-file-sync-process)
+ - [Snapshot](#snapshot)
+     - [Definition](#definition)
+     - [Use Cases](#use-cases)
+     - [Procedure](#procedure)
+     - [Diagram: Snapshot Process](#diagram-snapshot-process)
+     - [Note](#note)
+ - [Swap OS Disk](#swap-os-disk)
+     - [Description](#description)
+     - [Advantage](#advantage)
+     - [Process](#process)
+     - [Diagram: Swap OS Disk Process](#diagram-swap-os-disk-process)
 
 ---
 
-### On-Premises Servers/Setup
+## On-Premises Servers/Setup
 
-**Managed by:** Private owner
+### Managed by:
+Private owner
 
-**Challenges:**
+### Challenges:
 - **Limited Data Capacity:** Physical servers have finite storage limits.
 - **Server Lag:** Performance issues due to hardware limitations or high demand.
 
----
 
-### Solution: Syncing Azure Services with On-Premises Servers
+## Solution: Syncing Azure Services with On-Premises Servers
 
-**Advantages:**
+### Advantages:
 - **Backup:** Reliable and secure backups.
   - **Example:** Regularly scheduled backups to Azure ensure data safety.
 - **Data Availability:** Ensure data is always accessible.
@@ -29,12 +47,12 @@
 - **Centralized Control:** Manage data efficiently from a single point.
   - **Example:** Using Azure Portal to monitor and manage all storage resources.
 
-**Important Note:**
+### Important Note:
 - This solution is applicable only on Windows servers.
 - Frequently accessed data is kept on-premises, while infrequent data is stored on Azure.
 - The sync is one-way: data from on-premises is synced to Azure, but not the reverse.
 
-**Diagram: On-Premises and Azure Sync Setup**
+### Diagram: On-Premises and Azure Sync Setup
 ```plaintext
 +-------------------+       +-------------------+
 | On-Premises       |       | Azure             |
@@ -55,7 +73,7 @@
 
 ---
 
-### Steps for Azure File Sync
+## Steps for Azure File Sync
 
 1. **Create a Windows Server:**
    - Set up a Windows server that will serve as the on-premises server.
@@ -85,7 +103,7 @@
    - In Azure, create a sync group and add your Windows Server as a server endpoint to this group.
    - **Example:** Create a sync group named `mysyncgroup` and add the server endpoint `myserver`.
 
-**Diagram: Azure File Sync Process**
+### Diagram: Azure File Sync Process
 ```plaintext
 +-------------------+       +-------------------+
 | On-Premises       |       | Azure             |
@@ -106,12 +124,12 @@
 
 ---
 
-### Snapshot
+## Snapshot
 
-**Definition:**
+### Definition:
 - A snapshot is a point-in-time backup of your data or VM.
 
-**Use Cases:**
+### Use Cases:
 - **Migration and Cloning:** Easily migrate data or clone VMs.
   - **Example:** Create a snapshot of a VM before migrating it to another region.
 - **Backup:** Reliable backup option for data protection.
@@ -119,13 +137,13 @@
 - **Snapshot Reliability:** Snapshots do not crash, ensuring data integrity.
   - **Example:** Use snapshots to restore a VM to a previous state without data loss.
 
-**Procedure:**
+### Procedure:
 1. **Reference a Disk:** Create a snapshot from an existing disk.
    - **Example:** Select the disk of a running VM and create a snapshot.
 2. **Create a VM from the Snapshot:** Use the snapshot to create a new VM.
    - **Example:** Use the snapshot to deploy a new VM with the same configuration.
 
-**Diagram: Snapshot Process**
+### Diagram: Snapshot Process
 ```plaintext
 +-------------------+       +-------------------+
 | Existing Disk     |       | Snapshot          |
@@ -145,18 +163,18 @@
 
 ---
 
-**Note:-**
+### Note:-
 Azure never lets you decrease a disk size because there may be a possiblity that the disk is full.
 
-### Swap OS Disk
+## Swap OS Disk
 
-**Description:**
+### Description:
 - Replacing the OS disk with a backup disk.
 
-**Advantage:**
+### Advantage:
 - IP of original server doesn't change
 
-**Process:**
+### Process:
 1. **Prepare a Backup OS Disk:**
    - Ensure you have a ready-to-use backup disk.
    - **Example:** Create a backup of the current OS disk and store it in Azure.
@@ -165,7 +183,7 @@ Azure never lets you decrease a disk size because there may be a possiblity that
    - Replace the existing OS disk with the backup disk to restore or update the operating system.
    - **Example:** Detach the current OS disk from the VM and attach the backup disk.
 
-**Diagram: Swap OS Disk Process**
+### Diagram: Swap OS Disk Process
 ```plaintext
 +-------------------+       +-------------------+
 | Current OS Disk   |       | Backup OS Disk    |
