@@ -1,8 +1,12 @@
-## Day-12 (13-07-2024) : Azure Storage Account and Containers
+# Day-12 (13-07-2024) : Azure Storage Account and Containers
 
-### Table of Content:-
+## Table of Content:-
 - [Storage Account](#storage-account)
 - [Types of Storage Services](#types-of-storage-services)
+  - [BLOB (Binary Large Object)](#blob-binary-large-object)
+  - [FILE](#file)
+  - [TABLE](#table)
+  - [QUEUE](#queue)
 - [Redundancy](#redundancy)
 - [Replication Types](#replication-types)
 - [Erroneous Deletion](#erroneous-deletion)
@@ -13,7 +17,7 @@
 - [Steps to configure a Storage Account and BLOB Storage](#steps-to-configure-a-storage-account-and-blob-storage)
 ---
 
-### Storage Account
+## Storage Account
 **Benefits:**
 - **Availability and Accessibility:** Data can be accessed from anywhere with an internet connection.
 - **No Fear of Hardware Failure:** Data is stored in the cloud, eliminating concerns about physical hardware failures.
@@ -27,8 +31,9 @@
 **Handled by Storage Services:**
 - Cloud storage services address these issues by providing scalable, reliable, and easily accessible storage solutions.
 
-### Types of Storage Services:
-1. **BLOB (Binary Large Object):**
+## Types of Storage Services:
+
+### BLOB (Binary Large Object):
    - **Definition:** Large objects stored in binary format.
    - **Also Called:** Container.
    - **AWS Equivalent:** S3 (Simple Storage Service).
@@ -38,19 +43,19 @@
      - **Page Blob:** Used for random read/write operations and virtual machine disks.
      - **Append Blob:** Optimized for append operations, such as logging.
 
-2. **FILE:**
+### FILE:
    - **Definition:** Fully managed file shares.
    - **Examples:** SharePoint, NFS (Network File System) for Linux, SMB for Windows.
    - **AWS Equivalent:** EFS (Elastic File System).
    - **Usage:** Provides shared storage for applications using standard file system protocols.
 
-3. **TABLE:**
+### TABLE:
    - **Type:** NoSQL.
    - **Structure:** Key-Value pair.
    - **Feature:** Serverless, scalable storage for structured data.
    - **Examples:** Used for IoT data, metadata storage.
 
-4. **QUEUE:**
+### QUEUE:
    - **Function:** Stores messages in a queue to be processed asynchronously.
    - **Usage:** Implements producer-consumer and publisher-subscriber patterns.
    - **AWS Equivalent:** SQS (Simple Queue Service).
@@ -86,7 +91,7 @@
 
 ---
 
-### Diagram: Azure Storage Hierarchy
+## Diagram: Azure Storage Hierarchy
 
 ```plaintext
 Tenant
@@ -104,7 +109,7 @@ Tenant
 
 ---
 
-### Redundancy:
+## Redundancy:
 **Definition:** Making multiple copies of data to avoid loss during failures.
 
 **Types of Redundant Storage:**
@@ -144,15 +149,15 @@ GRS
 
 ---
 
-#### Replication Types:
+### Replication Types:
 - **Synchronous:** Updates changes immediately across replicas.
 - **Asynchronous:** Updates changes after some time.
 
-#### Erroneous Deletion:
+### Erroneous Deletion:
 - **Definition:** Deletion by mistake or misunderstanding.
 - **Solution:** Soft delete is enabled to recover data from accidental deletions.
 
-#### Access Tiers:
+### Access Tiers:
 **Definition:** Different levels of accessibility and cost for stored data.
 
 **Types (in decreasing order of accessibility):**
@@ -161,17 +166,17 @@ GRS
 3. **Cold:** Rarely accessed data.
 4. **Archive:** Data accessed once in a century (e.g., historical records).
 
-#### Snapshot:
+### Snapshot:
 - **Definition:** A copy of a blob at a specific point in time.
 - **Usage:** Enables backup and recovery operations.
   
-#### Security and Compliance
+### Security and Compliance
 
 - **Encryption:** Provides at-rest and in-transit encryption.
 - **Access Control:** Implements RBAC, ACLs, and SAS for granular access control.
 - **Compliance:** Meets standards such as GDPR, HIPAA, and ISO for data protection.
 
-##### Security and Compliance Example
+#### Security and Compliance Example
 1. **Encryption:**
    - **At-Rest:** Data is encrypted using Azure Storage Service Encryption (SSE).
    - **In-Transit:** Data is encrypted during transfer using HTTPS.
@@ -202,35 +207,20 @@ Security and Compliance:
 ```
 ---
 
-### Steps to configure a Storage Account and BLOB Storage
-1. **Create a Storage Account:**
-   - **Portal:** Navigate to the Azure portal, click on "Create a resource," select "Storage account," and fill in the necessary details.
-   - **Details:** Choose the subscription, resource group, storage account name, and region. Select the desired performance (Standard or Premium), redundancy (LRS, GRS, etc.), and access tier (Hot, Cool, etc.).
+## Steps to configure a Storage Account and BLOB Storage
+1. **Create a Resource Group**
+  - Navigate to the Azure portal, click on "Create a resource," select "Storage account," and fill in the necessary details.
+2. **Create a Storage Account:**
+   - Choose the subscription, resource group, storage account name, and region. Select the desired performance (Standard or Premium), redundancy (LRS, GRS, etc.), and access tier (Hot, Cool, etc.).
 
-2. **Create a Container in BLOB Storage:**
+3. **Create a Container in BLOB Storage:**
    - **Navigate:** Go to the newly created storage account, select "Containers" under the BLOB service section.
    - **Create Container:** Click on "+ Container," enter the name, and set the public access level (Private, Blob, or Container).
 
-3. **Upload a Blob:**
+4. **Upload a Blob:**
    - **Upload:** Inside the container, click on "Upload," select the file to upload, and click "Upload."
 
-```plaintext
-Storage Account Creation:
-Tenant
-   └── Subscription
-         └── Resource Group (RG)
-               └── Storage Account
-                     ├── BLOB
-                     │    ├── Container
-                     │    │    └── Blob (e.g., image.jpg)
-                     │    └── ...
-                     ├── FILE
-                     ├── TABLE
-                     └── QUEUE
-```
-
 ---
-
 
 This refined overview provides a comprehensive yet concise explanation of Azure Storage Services, focusing on key features, redundancy options, data management capabilities, security considerations, and includes detailed examples and diagrams for better understanding.
 This refined overview provides a comprehensive yet concise explanation of Azure Storage Services, focusing on key features, redundancy options, data management capabilities, and security considerations.
