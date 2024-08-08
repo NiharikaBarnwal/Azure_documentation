@@ -1,16 +1,21 @@
-### Day-17 (18-07-2024)
+# Day-17 (18-07-2024)
 
-**Topics Covered:**
-- Application Gateway
-- Azure Active Directory
+## Table of Contents
+1. [Application Gateway](#application-gateway)
+    1. [Types of Application Gateway](#types-of-application-gateway)
+    2. [Features](#features)
+    3. [Steps to Set Up an Application Gateway](#steps-to-set-up-an-application-gateway)
+2. [Azure Active Directory (AD)](#azure-active-directory-ad)
+    1. [Features](#features-1)
+    2. [Steps to Set Up Azure AD](#steps-to-set-up-azure-ad)
 
 ---
 
-### Application Gateway
+## Application Gateway
 
 **Application Gateway** in Azure acts as a web traffic load balancer, providing various capabilities to manage traffic to your web applications. One key feature is its ability to filter out bot attacks using Web Application Firewall (WAF), as bots typically share the same IP.
 
-#### Types of Application Gateway:
+### Types of Application Gateway:
 1. **Standard V1 (LB)**: Basic load balancing.
 2. **Standard V2 (LB+AS)**: Load balancing with auto-scaling.
 3. **WAF V1 (LB+WAF)**: Load balancing with WAF.
@@ -21,14 +26,14 @@
 - **LB**: Load Balancing
 - **AS**: Auto-scaling
 
-#### Features:
+### Features:
 1. **Cookie-based Affinity**: Ensures that a user is always served by the same VM.
 2. **Connection Draining**: Allows VMs to be safely removed from the load balancer for maintenance without disrupting active connections.
 3. **Multi-site Hosting**: Enables hosting of multiple websites, each with its own domain name, on the same Application Gateway.
 4. **SSL Offloading**: Offloads SSL decryption/encryption to the Application Gateway, reducing the workload on backend servers.
 5. **HTTP to HTTPS Rerouting**: Automatically redirects HTTP traffic to HTTPS for enhanced security.
 
-#### Steps to Set Up an Application Gateway:
+### Steps to Set Up an Application Gateway:
 1. **Create a Resource Group (RG)**:
    - Name it `AG-RG`.
 2. **Create a Virtual Network (VNet)**:
@@ -70,16 +75,16 @@
 
 ---
 
-### Azure Active Directory (AD)
+## Azure Active Directory (AD)
 
 **Azure Active Directory** (AD) is a cloud-based identity and access management service that helps employees sign in and access resources. It is utilized by system administrators to manage user identities and secure access to resources.
 
-#### Features:
+### Features:
 - **Centralized Authentication**: Stores authentication details centrally.
 - **User Management**: Manages usernames, file sharing, printing, and other administrative tasks.
 - **Centralized Administration**: All devices are connected to a central AD Domain Services (ADDS) server.
 
-#### Steps to Set Up Azure AD:
+### Steps to Set Up Azure AD:
 1. **Create a Resource Group (RG)**:
    - Name it `AG-RG`.
 2. **Create a Windows VM**:
