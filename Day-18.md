@@ -1,4 +1,4 @@
-# Day-18 (19-07-2024)
+# Day-18 (19-07-2024) : Azure Gen AI
 
 ---
 ## Table of Contents
