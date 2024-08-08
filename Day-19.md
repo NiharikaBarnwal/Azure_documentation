@@ -1,6 +1,6 @@
-## Day-19 (20-07-2024) : Project-1 (Text Completion with Llama 3 🦙)
+# Day-19 (20-07-2024) : Project-1 (Text Completion with Llama 3 🦙)
 
-### Table of Content:-
+## Table of Content:-
 - [About the Project](#about-the-project)
 - [Steps to Make Azure ML](#steps-to-make-azure-ml)
 - [URI vs. URL](#uri-vs-url)
@@ -11,7 +11,7 @@
 - [Example Code Setup](#example-code-setup)
 
 ---
-### About the Project
+## About the Project
 
 A simple yet effective demonstration of text completion using the Llama 3 model. Perfect for understanding the basics of large language models.
 
@@ -19,7 +19,7 @@ A simple yet effective demonstration of text completion using the Llama 3 model.
 - Demonstrates basic prompt-response interactions
 - Explores model parameters and their effects
 
-### Steps to Make the Project
+## Steps to Make the Project
 
 **1. Create a Resource Group (RG)**
 - Navigate to the Azure portal.
@@ -75,12 +75,12 @@ A simple yet effective demonstration of text completion using the Llama 3 model.
 
 **7. Deploy the Chatbot**
 
-#### Create a VM
+### Create a VM
 - In the Azure portal, create a new VM.
 - Configure it to allow access to all ports.
 - Select an appropriate size and OS for your needs (e.g., Windows Server or Ubuntu).
 
-#### Connect using RDP (Remote Desktop Protocol)
+### Connect using RDP (Remote Desktop Protocol)
 - Use an RDP client to connect to your VM using its public IP address and credentials.
 
 **8. Configure the VM as a Web Server**
@@ -108,23 +108,23 @@ A simple yet effective demonstration of text completion using the Llama 3 model.
 
 ---
 
-### URI vs. URL
+## URI vs. URL
 - **URI (Uniform Resource Identifier)**: A generic term for all types of names and addresses that refer to objects on the web. 
 - **URL (Uniform Resource Locator)**: A specific type of URI that provides the means to locate a resource by describing its primary access mechanism (e.g., its network "location").
 
-### API (Application Programming Interface)
+## API (Application Programming Interface)
 - A set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service.
 
-### Serverless API with Azure AI Content Safety
+## Serverless API with Azure AI Content Safety
 - Azure AI Content Safety APIs are serverless, meaning you are charged only when they are used. This makes them cost-effective for applications requiring dynamic scaling.
 
-### Azure CLI
+## Azure CLI
 - The Azure Command-Line Interface (CLI) is a set of commands used to manage Azure resources. It helps access tenant ID, subscription ID, and more, ensuring safe and efficient management.
 
-### Virtual Environment
+## Virtual Environment
 - **Virtual environments** help create isolated Python environments for your projects, ensuring dependencies are managed and the system remains clean.
 
-### Example Code Setup
+## Example Code Setup
 
 1. **Create a Virtual Environment**:
    ```sh
