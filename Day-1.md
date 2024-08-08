@@ -13,7 +13,7 @@
 10. [Datacenters](#datacenters)
 11. [Top Benefits of Cloud](#top-benefits-of-cloud)
 12. [Cloud Service Models](#cloud-service-models)
-    - [Diagrams](#diagrams)
+    - [Diagram](#diagram)
 13. [Types of Cloud Deployment](#types-of-cloud-deployment)
 14. [IT Process Management](#it-process-management)
 15. [Roles in Software Projects](#roles-in-software-projects)
@@ -83,7 +83,7 @@
 - **SaaS (Software as a Service)**: Delivers software applications over the internet.
   - **Example**: Salesforce, Microsoft Office 365.
  
-### Diagrams:
+### Diagram:
 
 ```
 +---------------+-------------+------+---------+------------+-----+----------------+---------+---------+------------+
