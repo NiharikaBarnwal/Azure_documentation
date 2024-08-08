@@ -209,7 +209,7 @@ Security and Compliance:
 
 ## Steps to configure a Storage Account and BLOB Storage
 1. **Create a Resource Group**
-  - Navigate to the Azure portal, click on "Create a resource," select "Storage account," and fill in the necessary details.
+    - Navigate to the Azure portal, click on "Create a resource," select "Storage account," and fill in the necessary details.
 2. **Create a Storage Account:**
    - Choose the subscription, resource group, storage account name, and region. Select the desired performance (Standard or Premium), redundancy (LRS, GRS, etc.), and access tier (Hot, Cool, etc.).
 
