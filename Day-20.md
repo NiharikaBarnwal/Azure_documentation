@@ -22,7 +22,7 @@ LLMs are stateless, meaning they lack awareness of previous interactions, leadin
 ## Project Overview
 In this project, we create an application that leverages RAG using the Meta-Llama-3-70B-Instruct model hosted on Azure ML. The model retrieves vectors stored in a local vector database (FAISS) and generates answers to user queries. The project involves setting up a conversational AI system that maintains context and retrieves relevant information efficiently.
 
-In this project, we implemented RAG by:
+Here, we implemented RAG by:
 1. Distributing large data into small chunks.
 2. Embedding these chunks.
 3. Storing the embeddings in a vector database.
