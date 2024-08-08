@@ -3,7 +3,7 @@
 ## Table of Content:-
 - [Storage Account](#storage-account)
 - [Types of Storage Services](#types-of-storage-services)
-  - [BLOB (Binary Large Object)](#blob-binary-large-object)
+  - [BLOB](#blob-binary-large-object)
   - [FILE](#file)
   - [TABLE](#table)
   - [QUEUE](#queue)
