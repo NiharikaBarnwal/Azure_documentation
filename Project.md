@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d39abe2a-379d-4d8a-807f-5c53d78a4f24)# Internship Final Project
+# Internship Final Project
 
 ## Aim of the Project
 1. Create separate virtual networks for a database (backend) and frontend of the application.
@@ -127,6 +127,9 @@
       ```bash
       sudo lsof -i :80
       sudo kill <PID>
+      ```
+  - Run the following commands:
+      ```bash
       sudo systemctl stop apache2
       sudo systemctl disable apache2
       python3 app.py
