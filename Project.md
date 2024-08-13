@@ -167,7 +167,7 @@
     - Enable autoscaling for the frontend VMs in the Load Balancer's backend pool.
     - Set rules for scaling based on CPU usage or other metrics to handle traffic efficiently.
 
-### Code for app.py
+## Code for app.py
    ```python
     from flask import Flask, request, jsonify, render_template
     import mysql.connector
@@ -208,7 +208,7 @@
         app.run(host='0.0.0.0', port=80)
    ```
 
-### code for index.html
+## Code for index.html
    ```html
 <!DOCTYPE html>
 <html lang="en">
