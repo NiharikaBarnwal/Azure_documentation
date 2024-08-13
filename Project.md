@@ -1,4 +1,4 @@
-# Internship Final Project
+![image](https://github.com/user-attachments/assets/2ad2b3e8-e923-433e-b239-101e97603a3f)# Internship Final Project
 
 ## Aim of the Project
 1. Create separate virtual networks for a database (backend) and frontend of the application.
@@ -10,6 +10,10 @@
 7. Deploy the application with Azure Hosting service and map the public IP of the load balancer to the domain name.
 8. Perform operations from the frontend as a general user and check the results in the database.
 9. Apply an SSL certificate to the domain while it is hosted.
+
+## Architecture Diagram -
+![image](https://github.com/user-attachments/assets/1fb4a1fa-6c1c-41a5-a708-5722d28825dc)
+
 
 ## Steps Followed
 
