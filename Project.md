@@ -1,4 +1,4 @@
-# Internship Final Project
+![image](https://github.com/user-attachments/assets/d39abe2a-379d-4d8a-807f-5c53d78a4f24)# Internship Final Project
 
 ## Aim of the Project
 1. Create separate virtual networks for a database (backend) and frontend of the application.
@@ -80,8 +80,10 @@
       sudo ufw allow 3306
       ```
   - Set up MySQL:
+      ```bash
+      sudo mysql -u root -p   #(Enter a password)
+      ```
       ```mysql
-      sudo mysql -u root -p
       CREATE DATABASE userdata_db;
       CREATE USER 'dbuser' IDENTIFIED BY 'dbpassword';
       GRANT ALL PRIVILEGES ON userdata_db.* TO 'dbuser';
