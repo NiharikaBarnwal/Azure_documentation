@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2ad2b3e8-e923-433e-b239-101e97603a3f)# Internship Final Project
+# Internship Final Project
 
 ## Aim of the Project
 1. Create separate virtual networks for a database (backend) and frontend of the application.
