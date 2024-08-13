@@ -167,6 +167,243 @@
     - Enable autoscaling for the frontend VMs in the Load Balancer's backend pool.
     - Set rules for scaling based on CPU usage or other metrics to handle traffic efficiently.
 
+### Code for app.py
+   ```python
+    from flask import Flask, request, jsonify, render_template
+    import mysql.connector
+
+    app = Flask(__name__)
+
+    # Database connection
+    db_connection = mysql.connector.connect(
+        host="10.1.1.4",  # Replace with the actual private IP address of dbVM
+        user="dbuser",
+        password="dbpassword",
+        database="user_data_db"  # Removed the trailing space
+    )
+    db_cursor = db_connection.cursor()
+
+    @app.route('/')
+    def home():
+        return render_template('index.html')  # Render the index.html template
+
+    @app.route('/register', methods=['POST'])
+    def register():
+        name = request.form['name']
+        email = request.form['email']
+        try:
+            db_cursor.execute("INSERT INTO users (name, email) VALUES (%s, %s)", (name, email))
+            db_connection.commit()
+            return jsonify({"message": "Registration successful"}), 201
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    @app.route('/get_users', methods=['GET'])
+    def get_users():
+        db_cursor.execute("SELECT * FROM users")
+        users = db_cursor.fetchall()
+        return jsonify(users), 200
+
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0', port=80)
+   ```
+
+### code for index.html
+   ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #f9f9f9, #e3e3e3);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            border: 2px solid #007bff;
+            position: relative;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 12px 12px 0 0;
+        }
+        h1 {
+            font-size: 32px;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input[type="text"],
+        input[type="email"] {
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        #show-users {
+            background-color: #28a745;
+            margin-top: 20px; /* Added space between buttons */
+        }
+        #show-users:hover {
+            background-color: #218838;
+        }
+        .results {
+            margin-top: 30px;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .results table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 10px;
+        }
+        .results th, .results td {
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+            color: #555;
+        }
+        .results th {
+            background: #007bff;
+            color: #fff;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .results tr:nth-child(even) {
+            background: #f1f1f1;
+        }
+        .results tr:nth-child(odd) {
+            background: #ffffff;
+        }
+        .results tr:hover {
+            background: #e9ecef;
+        }
+        .results td:first-child {
+            border-left: 1px solid #ddd;
+        }
+        .results td:last-child {
+            border-right: 1px solid #ddd;
+        }
+        .results table, .results th, .results td {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registration-form" action="/register" method="post">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Register</button>
+        </form>
+        <button id="show-users" type="button">Show All Users</button>
+        <div class="results" id="results">
+            <!-- User data will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-users').addEventListener('click', function() {
+            fetch('/get_users')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
+                    
+                    if (data.length === 0) {
+                        resultsDiv.innerHTML = '<p>No users found.</p>';
+                        return;
+                    }
+
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    const tbody = document.createElement('tbody');
+
+                    // Create table header
+                    const headerRow = document.createElement('tr');
+                    const nameHeader = document.createElement('th');
+                    nameHeader.textContent = 'Name';
+                    const emailHeader = document.createElement('th');
+                    emailHeader.textContent = 'Email';
+                    headerRow.appendChild(nameHeader);
+                    headerRow.appendChild(emailHeader);
+                    thead.appendChild(headerRow);
+                    
+                    // Populate table body with user data
+                    data.forEach(user => {
+                        const row = document.createElement('tr');
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = user[1]; // Assuming the order: id, name, email
+                        const emailCell = document.createElement('td');
+                        emailCell.textContent = user[2];
+                        row.appendChild(nameCell);
+                        row.appendChild(emailCell);
+                        tbody.appendChild(row);
+                    });
+
+                    table.appendChild(thead);
+                    table.appendChild(tbody);
+                    resultsDiv.appendChild(table);
+                })
+                .catch(error => {
+                    console.error('Error fetching users:', error);
+                });
+        });
+    </script>
+</body>
+</html>
+   ```
+
 ## Summary
 
 In this Azure project, we're setting up a well-organized and secure application environment. We create separate virtual networks for the frontend and backend, then deploy virtual machines to host each part. To manage and secure access, we use a jump server, and a load balancer with a public IP handles traffic to the frontend, with autoscaling to adjust to varying demands. We ensure secure connections with VPNs and deploy the app with Azure Hosting services, linking it to a domain with SSL encryption for added security. The whole setup follows industry best practices to keep everything reliable, scalable, and compliant.
