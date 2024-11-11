@@ -34,7 +34,7 @@ Azure Persistent Disks provide block-level storage volumes that are used with Az
 
 ### Types of Disks:
 
-1. **Managed Disk**
+1. **Managed Disk:**
    Managed Disks simplify storage management by handling the storage account for you. Azure manages the storage, making scaling and management easier.
     - **Categories:** 
         - Standard HDD :
@@ -50,7 +50,7 @@ Azure Persistent Disks provide block-level storage volumes that are used with Az
           - Ultra-high performance for data-intensive workloads.
           - Scenario: 	IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.
 
-2. **Unmanaged Disk**
+2. **Unmanaged Disk:**
    Unmanaged Disks require you to handle the storage accounts and the VHD files used by VMs. They provide more control but require more effort to manage.
     - **Categories:**
         - Standard HDD : Similar to managed Standard HDD but requires manual management.
