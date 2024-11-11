@@ -30,10 +30,12 @@
 ---
 
 ## Persistent Disk
+Azure Persistent Disks provide block-level storage volumes that are used with Azure Virtual Machines (VMs). Disks in Azure are virtualized and can be managed as either Managed Disks or Unmanaged Disks.
 
 ### Types of Disks:
 
 1. **Managed Disk**
+   Managed Disks simplify storage management by handling the storage account for you. Azure manages the storage, making scaling and management easier.
     - **Categories:** 
         - Standard HDD :
           - Cost-effective storage for infrequently accessed data.
@@ -49,6 +51,7 @@
           - Scenario: 	IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.
 
 2. **Unmanaged Disk**
+   Unmanaged Disks require you to handle the storage accounts and the VHD files used by VMs. They provide more control but require more effort to manage.
     - **Categories:**
         - Standard HDD : Similar to managed Standard HDD but requires manual management.
         - Standard SSD : Similar to managed Standard SSD but requires manual management.
@@ -105,7 +108,7 @@
 ---
 
 ## CDN (Content Delivery Network)
-
+Azure CDN helps reduce latency by creating Points of Presence (POPs) or Edge Locations closer to end-users. These store cached content, minimizing the distance data needs to travel.
 ### AWS Equivalent:
 - **CloudFront**
 
@@ -150,7 +153,7 @@
 ---
 
 ## App Services
-
+Azure App Services provide a PaaS environment for deploying and scaling web applications. It simplifies infrastructure management and reduces costs for small-scale deployments.
 **Platform as a Service (PaaS) for Small Businesses and Small Scale Deployments**
 
 ### Examples:
