@@ -153,7 +153,7 @@ Azure CDN helps reduce latency by creating Points of Presence (POPs) or Edge Loc
 ---
 
 ## App Services
-Azure App Services provide a PaaS environment for deploying and scaling web applications. It simplifies infrastructure management and reduces costs for small-scale deployments.
+Azure App Services provide a PaaS environment for deploying and scaling web applications. It simplifies infrastructure management and reduces costs for small-scale deployments.  
 **Platform as a Service (PaaS) for Small Businesses and Small Scale Deployments**
 
 ### Examples:
