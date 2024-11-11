@@ -3,15 +3,16 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Importance of Memory in LLMs](#importance-of-memory-in-llms)
-3. [Project Overview](#project-overview)
-4. [Steps to Implement the Project](#steps-to-implement-the-project)
-5. [Detailed Explanation of Key Components](#detailed-explanation-of-key-components)
+3. [Langchain](#langchain)
+4. [Project Overview](#project-overview)
+5. [Steps to Implement the Project](#steps-to-implement-the-project)
+6. [Detailed Explanation of Key Components](#detailed-explanation-of-key-components)
     - [Data Chunking and Embedding](#data-chunking-and-embedding)
     - [Vector Databases](#vector-databases)
     - [Retrieval Augmented Generation Process](#retrieval-augmented-generation-process)
     - [LLaMA Model Interface and Parameter Tuning](#llama-model-interface-and-parameter-tuning)
     - [Enhancing the Conversational AI System](#enhancing-the-conversational-ai-system)
-6. [Conclusion](#conclusion)
+7. [Conclusion](#conclusion)
 
 ## Introduction
 Retrieval Augmented Generation (RAG) is a process where a model is provided with data (PDFs, text, Excel sheets) to generate answers based on user queries. This process is particularly useful when handling large datasets by distributing them into smaller chunks, embedding them, and storing them in a vector database. This allows for efficient retrieval of relevant information.
