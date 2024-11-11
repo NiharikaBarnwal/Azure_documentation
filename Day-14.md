@@ -2,6 +2,7 @@
 
 ## Table of Contents
  - [Static Website Hosting](#static-website-hosting)
+     - [Introduction](#introduction)
      - [VM Configuration as a Web Server](#vm-configuration-as-a-web-server)
      - [Advantages of Static Website Hosting](#advantages-of-static-website-hosting)
      - [Diagram: Static Website Hosting Setup](#diagram-static-website-hosting-setup)
@@ -16,6 +17,9 @@
 ---
 
 ## Static Website Hosting
+
+### Introduction
+Hosting a static website in Azure involves using Azure Storage to serve static content like HTML, CSS, JavaScript, and images directly from a storage account.
 
 ### VM Configuration as a Web Server:
 - **Windows:** Internet Information Services (IIS)
@@ -76,6 +80,7 @@
 ```
 
 ## Types of Test Storage
+Disks in Azure are block-level storage volumes used with Azure VMs. There are two types: managed and unmanaged disks.
 
 ### Managed Disk:
 - **Management:** Managed by Azure.
