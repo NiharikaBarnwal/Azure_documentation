@@ -19,6 +19,11 @@ Retrieval Augmented Generation (RAG) is a process where a model is provided with
 ## Importance of Memory in LLMs
 LLMs are stateless, meaning they lack awareness of previous interactions, leading to potential hallucinations when asked follow-up questions. To mitigate this, we use mechanisms like ConversationBufferMemory to maintain chat history, or history-aware retrievers to provide context-aware responses.
 
+## LangChain
+You can use LangChain to build a more complex application that utilizes LLaMA for specific tasks, such as creating a conversational agent that uses LLaMA to generate responses and a retrieval system to fetch relevant documents.
+
+NOTE: LLMs are the core models for generating text, while LangChain is a framework that enhances how these models are used in applications.
+
 ## Project Overview
 In this project, we create an application that leverages RAG using the Meta-Llama-3-70B-Instruct model hosted on Azure ML. The model retrieves vectors stored in a local vector database (FAISS) and generates answers to user queries. The project involves setting up a conversational AI system that maintains context and retrieves relevant information efficiently.
 
